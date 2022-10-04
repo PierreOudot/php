@@ -43,8 +43,10 @@ Attention : en utlisant des fichiers html header footer appellé par le code php
 *passer des variables d'une page à une autre*: plusieurs méthodes:
 
 #### *utiliser des variables de session*:
-```cf mtehodes session
+cf mtehodes session
+
 #### *utiliser les données server*:
-```cf $_SERVER : recupere dans un array un ensemble de données du server.
+
+cf $_SERVER : recupere dans un array un ensemble de données du server.
 
 variables d'environnement : centraliser dans un fichier des variable utilisées parotut.
