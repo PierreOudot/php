@@ -43,10 +43,20 @@ Attention : en utlisant des fichiers html header footer appellé par le code php
 *passer des variables d'une page à une autre*: plusieurs méthodes:
 
 #### *utiliser des variables de session*:
-cf mtehodes session
+cf methodes session : creer des variable de session, potentiellement persistantes (session se ferme par defaut à la fermeture de l'onglet/co avec le site)
+cf methodes get:$_GET["clé"]: va récupérer des données présentes dans l'url.
+cf methodes post: $_POST[...] 
+les deux methodes se basent sur des arrays associatifs, sont des variables super globales. get se abse sur données d'url, pas du tout sécurisée, alors que post est beaucoup plus sécurisé, utilisé pour transférer données de form par ex.
 
 #### *utiliser les données server*:
 
 cf $_SERVER : recupere dans un array un ensemble de données du server.
 
+utilisation d'un fichier de fonctions, bien penser à l'appeler avec resuire_once 'nomfichier.php' dans chaque fichier pour y utiliser les dites fonctions.
+faire attention aux balises php (bien ouvrir fermer );
+
 variables d'environnement : centraliser dans un fichier des variable utilisées parotut.
+
+## **1.3-front controller pattern**:
+
+pattern permettant de centraliser la gestion des requêtes dans une seule page (= un seul point d'entréé).
