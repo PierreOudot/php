@@ -1,4 +1,7 @@
-<?php require 'header.php';?>
+<?php 
+require_once 'fonction.php';
+require 'header.php';?>
+
 <head>
     <meta charset="utf-8">
     <title>ma page d'accueil</title>
@@ -20,4 +23,4 @@
     </div>
     
 </body>
-<?php require 'footer.php';?>
+<?php require 'footer.php'.SID;?>

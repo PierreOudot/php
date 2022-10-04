@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+<?php 
+include_once 'fontion.php';?>
+
 <html>
     <head>
         <meta charset="utf-8">
-        <title> mon header</title>
+        <title> <?php echo getTitle();?></title>
     </head>
     <header>
         <h1> Mon header </h1>

@@ -1,4 +1,7 @@
-<?php require 'header.php'; ?>
+<?php 
+require_once 'fonction.php';
+require 'header.php';?>
+
 <head>
     <meta charset="utf-8">
     <title> Tout </title>

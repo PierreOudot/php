@@ -1,6 +1,6 @@
 # TP php
 
-## **1.1**
+## **1.1-Definitions**
 
 ### *Apache* : 
 
@@ -26,10 +26,24 @@ Attention certains langages peuvent être utilisés des deux côtés.
 
 ### **HTTP**
 
-"Hypertext Transfert Protocol" :protocole couche 7 OSI permettant de transmettredoc hypermedia, ex HTML, permet au anv web de communiquer avec servers entre autres. suit modèle client-server, protocol sans état (pas de données conservée sur server une fois la co fermée).
+"Hypertext Transfert Protocol" :protocole couche 7 OSI permettant de transmettredoc hypermedia, ex HTML, permet au anv web de communiquer avec servers entre autres. suit modèle client-server, protocol sans état (pas de données conservée sur server une fois la co fermée).par defaut/standard =port 80
 
 ### **Server Web**
 
-logiciel de service de ressources web. Server repondant à dew requetes web (HTTP). Supporte aussi les protocoles mails,BDD, streaming...
+machine dédiée à un logiciel de service de ressources web. Server repondant à des requetes web (HTTP). Supporte aussi les protocoles mails,BDD, streaming...
 
+## **1.2-Creation template**
 
+header et footer ne contiennent pas de balises php, uniqument de l'html
+On peut inclure des balises php dans du html "<?php ....;?>
+Attention : en utlisant des fichiers html header footer appellé par le code php, on respecte la structure d'un seul fichier : le header ouvre le code html, footer le ferme, pas de repet. On utlise aucune balise html ouverture/ fermeture dans le fichier php.
+
+*include vs require*: fonctions permettant d'inclure un fichier dans une page. mêm role des deux fonctions, require leve une exception de plus haut niveau.
+
+*passer des variables d'une page à une autre*: plusieurs méthodes:
+####*utiliser des variables de session*:
+```cf mtehodes session
+#### *utiliser les données server*:
+```cf $_SERVER : recupere dans un array un ensemble de données du server.
+
+variables d'environnement : centraliser dans un fichier des variable utilisées parotut.
