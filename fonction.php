@@ -1,8 +1,13 @@
 <?php
 
 function getTitle(){
-    $title = str_replace("/","",$_SERVER["PHP_SELF"]);
-    $title = str_replace(".php","",$title);
+    if($_GET["PHP_SELF"]==="/index.php"){
+        $title = str_replace("/","",$_SERVER["REQUEST_URI"]);
+        $title = str_replace(".php","",$title);
+        var_dump("fruit");
+    }else{
+        $title = str_replace("page=/","",$_SERVER["QUERY_STRING"]);
+    }
     return $title;
 }
 

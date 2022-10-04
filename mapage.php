@@ -16,11 +16,11 @@ require 'header.php';?>
     <h2>Menu</h2>
     <div class="div_accueil_menu">
         <ul class="menu">
-            <li><a href="tout.php" target="_blank">Tout</a></li>
-            <li><a href="rien.php" target="_blank">Rien</a></li>
-            <li><a href="tout_et_rien.php" target="_blank">Tout et Rien</a></li>
+            <li><a href="index.php?page=/tout" target="_blank">Tout</a></li>
+            <li><a href="index.php?page=/rien" target="_blank">Rien</a></li>
+            <li><a href="index.php?page=/tout_et_rien" target="_blank">Tout et Rien</a></li>
         </ul>
     </div>
     
 </body>
-<?php require 'footer.php'.SID;?>
+<?php require 'footer.php';?>

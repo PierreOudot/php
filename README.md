@@ -59,4 +59,4 @@ variables d'environnement : centraliser dans un fichier des variable utilisées 
 
 ## **1.3-front controller pattern**:
 
-pattern permettant de centraliser la gestion des requêtes dans une seule page (= un seul point d'entréé).
+pattern permettant de centraliser la gestion des requêtes dans une seule page (= un seul point d'entréé). Permet d'encapsuler la redirection des liens, sans donner un accès direct vers le fichier source de la page redirigée.

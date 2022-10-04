@@ -8,7 +8,7 @@ require 'header.php';?>
 </head>
 
 <body>
-    <pre
+    <pre>
     _________
      ,''         ``.
     /               \

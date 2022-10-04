@@ -1,5 +1,5 @@
 <?php 
-include_once 'fontion.php';?>
+include_once 'fonction.php';?>
 
 <head>
     <meta charset="utf_8">
