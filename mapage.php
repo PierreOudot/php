@@ -2,10 +2,7 @@
 require_once 'fonction.php';
 require 'header.php';?>
 
-<head>
-    <meta charset="utf-8">
-    <title>ma page d'accueil</title>
-</head>
+
 <body>
     <div class="div_accueil">
         <p>Bienvenue sur la page d'accueil de mon site: un peu de tout et surtout du rien. Yum-yum.</p>
@@ -19,6 +16,7 @@ require 'header.php';?>
             <li><a href="index.php?page=/tout" target="_blank">Tout</a></li>
             <li><a href="index.php?page=/rien" target="_blank">Rien</a></li>
             <li><a href="index.php?page=/tout_et_rien" target="_blank">Tout et Rien</a></li>
+            <li><a href="index.php?page=/contact" target="_blank">Contact</a></li>
         </ul>
     </div>
     
