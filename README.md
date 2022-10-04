@@ -41,6 +41,7 @@ Attention : en utlisant des fichiers html header footer appellé par le code php
 *include vs require*: fonctions permettant d'inclure un fichier dans une page. mêm role des deux fonctions, require leve une exception de plus haut niveau.
 
 *passer des variables d'une page à une autre*: plusieurs méthodes:
+
 #### *utiliser des variables de session*:
 ```cf mtehodes session
 #### *utiliser les données server*:
