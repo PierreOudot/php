@@ -1,6 +1,6 @@
 <?php 
 require_once 'fonction.php';
-require 'header.php';?>
+require_once 'header.php';?>
 
 <head>
     <meta charset="utf-8">
