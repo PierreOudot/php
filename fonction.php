@@ -10,4 +10,13 @@ function getTitle(){
     return $title;
 }
 
+//nettoie les données du formulaire
+function traitementDonnees($data){
+    $data=trim($data);//enlève les caractères inutiles type doubles espaces, tab...
+    $data=stripslashes($data);//enlève les /
+    $data=htmlspecialchars($data);//on enlève les caract html
+
+    return $data;
+}
+
 ?>

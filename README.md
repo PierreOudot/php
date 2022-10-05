@@ -60,3 +60,15 @@ variables d'environnement : centraliser dans un fichier des variable utilisées 
 ## **1.3-front controller pattern**:
 
 pattern permettant de centraliser la gestion des requêtes dans une seule page (= un seul point d'entréé). Permet d'encapsuler la redirection des liens, sans donner un accès direct vers le fichier source de la page redirigée.
+
+## **1.4-formulaire**
+
+cf la mise en plce de formulaires en html. on inclut un fichier php pour gérer les actions.
+
+--->utilisation option required en html
+--->on utilise un script php pour établir des règles particulières dans le formulaire.
+
+attention de prendre en compte les notions de sécurité en créant le formulaire, bien utiliser la fonction htmlspecialchars pour éliminer l'injection de commandes html.
+
+cf contact.php pour plus de détails
+
