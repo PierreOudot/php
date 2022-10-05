@@ -1,7 +1,7 @@
 <?php 
 require_once 'fonction.php';
 require_once 'header.php';
-echo var_dump($_GET['page']);?>
+?>
 
 
 <body>
