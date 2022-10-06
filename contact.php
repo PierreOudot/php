@@ -15,20 +15,20 @@ $donneesFormulaire = array(
 
 
 //exécute le bloc une fois le bouton ok du form pressé , si la bonne methode(post:get) est appellée cf method= dans le code html du form
-if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+if($_SERVER["REQUEST_METHOD"] == "POST"){ 
     //on apllique une methode de validation/modif des données
-    if(empty($_POST['civilite'])){ //empty verifie que le champs n'est pas vide
+    if(empty($_POST["civilite"])){ //empty verifie que le champs n'est pas vide
         $civiliteErr="Sélectionnez votre civilité";
         
     }else{
-        $civilite= $_POST['civilite'];
+        $civilite= $_POST["civilite"];
         $donneesFormulaire["civilite"]=$civilite;
     }
 
-    if(empty($_POST['nom'])){
+    if(empty($_POST["nom"])){
         $nomErr="Renseignez votre nom et prénom";  
     }else{
-        $nom= traitementDonnees($_POST['nom']);
+        $nom= traitementDonnees($_POST["nom"]);
         if (!preg_match("/^[a-zA-Z-' ]*$/",$nom)) {
             $nomErr = "Renseignez seulement des lettres et espaces"; // on verifie qu'il n'y a que des caractères autorisés dans le nom
             $nom="";
@@ -37,45 +37,43 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
     }
 
-    if(empty($_POST['message'])){
+    if(empty($_POST["message"])){
         $messageErr="Soyez plus explicite";
         
     }else{
-        $message= traitementDonnees($_POST['message']);
+        $message= traitementDonnees($_POST["message"]);
         $donneesFormulaire["message"]=$message;
     }
 
-    if(empty($_POST['age'])){
+    if(empty($_POST["age"])){
         $ageErr="Renseignez votre age"; 
     }else{
         //echo var_dump(filter_input(INPUT_POST,traitementDonnees($_POST['age']),FILTER_VALIDATE_INT));
-        if(filter_input(INPUT_POST,traitementDonnees($_POST['age']),FILTER_VALIDATE_INT)){//filter_input verifie que la data est du bon type et la valide, sinon renvoie false
-            $age= filter_input(INPUT_POST,traitementDonnees($_POST['age']),FILTER_VALIDATE_INT);
-            $donneesFormulaire["age"]=$age;
-        }else{
+        if((filter_input(INPUT_POST,traitementDonnees($_POST["age"]),FILTER_VALIDATE_INT) == false) ||
+        (filter_input(INPUT_POST,traitementDonnees($_POST["age"]),FILTER_VALIDATE_INT) == null) ){//filter_input verifie que la data est du bon type et la valide, sinon renvoie false
             $ageErr="Age invalide";
+        }else{
+            
+            $age= filter_input(INPUT_POST,traitementDonnees($_POST["age"]),FILTER_VALIDATE_INT);
+            $donneesFormulaire["age"]=$age;
         }
     }
 
-    if(empty($_POST['email'])){
+    if(empty($_POST["email"])){
         $emailErr="Renseignez votre email";
         
-    }else{
-        $var= "toto@gmail.com";
-        
-        if(filter_input(INPUT_POST,$var,FILTER_SANITIZE_EMAIL)){
-            var_dump("ici");
+    }else{        
+        if((filter_input(INPUT_POST,traitementDonnees($_POST["email"]),FILTER_VALIDATE_EMAIL) == false) ||
+         (filter_input(INPUT_POST,traitementDonnees($_POST["email"]),FILTER_VALIDATE_EMAIL) == null)){
             $emailErr="Adresse email invalide";
         }else{
-            var_dump("ici2");
             $email= filter_input(INPUT_POST,$var,FILTER_VALIDATE_EMAIL);
             var_dump($email);
             $donneesFormulaire["email"]=$email;
-            
         }
     }
 
-    if(empty($_POST['raison'])){ //empty verifie que le champs n'est pas vide
+    if(empty($_POST["raison"])){ //empty verifie que le champs n'est pas vide
         $raisonErr="Prouvez votre motivation";
         
     }else{
@@ -83,7 +81,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $donneesFormulaire["raison"]=$raison;
     }
 
-    //echo var_dump($_POST);
+    
+    var_dump($_POST);
     // foreach($donneesFormulaire as $value){
     //     echo $value;
     // }
